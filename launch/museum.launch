@@ -16,6 +16,7 @@
     </include>
 
 
+    <!-- Add robot to world-->
     <!-- Short-term hack to support the original front_laser:=true argument for spawning
        the simulator. This will be removed in favour of using the config:=x arg instead. -->
     <arg name="front_laser" default="false" />
