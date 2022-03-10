@@ -1,27 +1,17 @@
 # Museum
 
-### Diretorios base para utilização do Jackal
 
-- apos clonar os repositorios certifiquese de mudar para a branch correta, nos cassos onde não existir a branch "noetic" use a branche "melodic" essa orientação é valida para os repositorios da clearpath.
+### Diretórios base para utilização do Jackal
+
+Após clonar os repositórios certifique-se de mudar para a branch correta, quando não existir a branch "noetic" use a branch "melodic" essa orientação é válida para os repositórios da clearpath.
 
 ```
-cd robos_autonomos_t2_ws/src
+cd catkin_ws/src
 git clone https://github.com/jackal/jackal.git
-```
-
-```
-cd robos_autonomos_t2_ws/src
 git clone https://github.com/clearpathrobotics/LMS1xx.git
-```
-
-```
-cd robos_autonomos_t2_ws/src
 git clone https://github.com/jackal/jackal_simulator.git
 ```
 
-```
-https://github.com/ros-visualization/interactive_marker_twist_server.git
-```
 Instalar dependências
 ```
 $rosdep install --from-paths src --ignore-src -r -y
