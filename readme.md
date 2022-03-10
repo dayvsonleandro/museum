@@ -1,5 +1,10 @@
 # Museum
 
+### Executar simulação do museu
+
+cd catkin_ws
+source devel/setup.bash
+roslaunch museum museum.launch
 
 ### Diretórios base para utilização do Jackal
 
@@ -20,3 +25,11 @@ $rosdep install --from-paths src --ignore-src -r -y
 ### Referencias
 
 - [Clearpath](https://www.clearpathrobotics.com/assets/guides/noetic/jackal/simulation.html0)
+
+
+### Atividades
+
+- [ ] Criação de uma simulação “mundo” de um museu;
+- [ ] Simulação de uma visita autônoma por um robô autônomo em simulação;
+- [ ] Navegação e desvio de obstáculos pelo robô em simulação;
+- [ ] Apresentação das obras.
