@@ -1,4 +1,4 @@
 local_costmap:
   global_frame: odom
-  robot_base_frame: base_link # base_footprint # 
+  robot_base_frame: chassis_link # base_footprint # 
   rolling_window: true

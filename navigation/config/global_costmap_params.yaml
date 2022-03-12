@@ -1,4 +1,4 @@
 global_costmap:
   global_frame: map
-  robot_base_frame: base_footprint # base_link #
+  robot_base_frame: chassis_link # base_footprint # base_link #
   static_map: true

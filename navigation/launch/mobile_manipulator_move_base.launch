@@ -1,6 +1,6 @@
 <launch>
 
-    <node name="map_server" pkg="map_server" type="map_server" args="$(find robot_description)/maps/willow_0001.yaml" />
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find museum)/maps/bookstore_clean.yaml" />
 
     <include file="$(find navigation)/launch/amcl_diff.launch" />
 
@@ -10,6 +10,6 @@
         <rosparam file="$(find navigation)/config/local_costmap_params.yaml" command="load" />
         <rosparam file="$(find navigation)/config/global_costmap_params.yaml" command="load" />
         <rosparam file="$(find navigation)/config/base_local_planner_params.yaml" command="load" />
-        <remap from="cmd_vel" to="/robot_base_velocity_controller/cmd_vel" />
+        <remap from="cmd_vel" to="/jackal_velocity_controller/cmd_vel" />
     </node>
 </launch>

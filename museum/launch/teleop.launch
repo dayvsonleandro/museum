@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <node pkg="rqt_robot_steering" type="rqt_robot_steering" name="Control_rqt_teleop">
+        <param name="default_topic" type="str" value="/jackal_velocity_controller/cmd_vel" />
+        <param name="default_vx_max" type="double" value="0.6" />
+        <param name="default_vx_min" type="double" value="-0.6" />
+        <param name="default_vw_max" type="double" value="1.0" />
+        <param name="default_vw_min" type="double" value="-1.0" />
+    </node>
+
+</launch>
