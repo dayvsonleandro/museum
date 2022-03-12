@@ -55,6 +55,7 @@ $rosdep install --from-paths src --ignore-src -r -y
 
 - [Clearpath](https://www.clearpathrobotics.com/assets/guides/noetic/jackal/simulation.html0)
 - [aws-robomaker-bookstore-world](https://github.com/aws-robotics/aws-robomaker-bookstore-world)
+- [python-sending-goals](https://answers.ros.org/question/80646/python-sending-goals-to-the-navigation-stack/)
 
 ### Atividades
 
@@ -84,5 +85,5 @@ Salvando o mapa do ambiente
 ```
 cd catkin_ws/src
 source devel/setup.bash
-rosrun map_server map_saver -f bookstore_clean
+rosrun map_server map_saver -f bookstore
 ```

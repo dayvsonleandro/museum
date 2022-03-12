@@ -1,4 +1,5 @@
-footprint: [[0.70, 0.65], [0.70, -0.65], [-0.70, -0.65], [-0.75, 0.65]]
+footprint:  [[0.30, 0.30], [0.30, -0.30], [-0.30, -0.30], [-0.30, 0.30]]
+# footprint: [[-0.5, -0.33], [-0.5, 0.33], [0.5, 0.33], [0.5, -0.33]]
 observation_sources: laser_scan_sensor
 laser_scan_sensor:
   sensor_frame: front_laser #laser_link
