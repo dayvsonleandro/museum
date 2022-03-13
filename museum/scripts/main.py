@@ -10,21 +10,46 @@ client = actionlib.SimpleActionClient('/move_base', MoveBaseAction)
 rospy.loginfo("Waiting for move base server")
 client.wait_for_server()
 
-goal = MoveBaseGoal()
-goal.target_pose.header.frame_id = 'map'
-goal.target_pose.pose.position.x = 0
-goal.target_pose.pose.position.y = 0
-goal.target_pose.pose.orientation.z = 0.727
-goal.target_pose.pose.orientation.w = 0.686
 
-client.send_goal(goal)
-client.wait_for_result()
+def goto(px, py, oz, ow):
 
-# goal.target_pose.header.frame_id = 'map'
-# goal.target_pose.pose.position.x = -0.063
-# goal.target_pose.pose.position.y = -9.035
-# goal.target_pose.pose.orientation.z = 0.5
-# goal.target_pose.pose.orientation.w = 0.5
+    goal = MoveBaseGoal()
+    goal.target_pose.header.frame_id = 'map'
+    goal.target_pose.pose.position.x = px
+    goal.target_pose.pose.position.y = py
+    goal.target_pose.pose.orientation.z = oz
+    goal.target_pose.pose.orientation.w = ow
 
-# client.send_goal(goal)
-# client.wait_for_result()
+    client.send_goal(goal)
+    client.wait_for_result()
+
+
+rospy.loginfo('Start')
+goto(0, 0, 0.5, 0.5)
+
+goto(-5, 5, 0.5, 0.5)
+rospy.loginfo('Welcome')
+
+goto(-5, 0, 0.5, 0.5)
+rospy.loginfo('First art')
+
+goto(-5, -5, 0.5, 0.5)
+rospy.loginfo('Second art')
+
+goto(0, -5, 0.5, 0.5)
+rospy.loginfo('Third art')
+
+goto(5, -5, 0.5, 0.5)
+rospy.loginfo('Fourth art')
+
+goto(5, 0, 0.5, 0.5)
+rospy.loginfo('Fifth art')
+
+goto(0, 0, 0.5, 0.5)
+rospy.loginfo('Sixth art')
+
+goto(0, 5, 0.5, 0.5)
+rospy.loginfo('Seventh art')
+
+
+rospy.loginfo('End')

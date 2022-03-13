@@ -27,7 +27,7 @@
   <arg name="config" default="$(arg default_config)" />
 
   <!-- Optionally enable teleop for the simulation -->
-  <arg name="joystick" default="true" />
+  <arg name="joystick" default="false" />
 
   <!-- Spawn Jackal -->
   <include file="$(find jackal_gazebo)/launch/spawn_jackal.launch">

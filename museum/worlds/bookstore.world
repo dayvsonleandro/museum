@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
+
 <sdf version="1.6">
     <world name="default">
         <!-- override the default position of the camera -->
@@ -1129,5 +1130,7 @@
             <cast_shadows>0</cast_shadows>
             <direction>0 0 -1</direction>
         </light>
+
+        
     </world>
 </sdf>
