@@ -56,7 +56,7 @@
   <!-- <include file="$(find robot_description)/launch/navigating_gazebo.launch" /> -->
 
   <node pkg="gmapping" type="slam_gmapping" name="gmapping_thing" output="screen">
-    <remap from="scan" to="front/scan" />
+    <remap from="scan" to="/front/scan" />
     <param name="odom_frame" value="odom" />
     <param name="base_frame" value="base_link" />
   </node>

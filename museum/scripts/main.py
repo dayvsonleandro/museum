@@ -3,12 +3,19 @@
 import actionlib
 import rospy
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal, MoveBaseFeedback, MoveBaseResult
+import cv2
+import imutils
+import os
+
 
 rospy.init_node('send_client_goal')
 
 client = actionlib.SimpleActionClient('/move_base', MoveBaseAction)
 rospy.loginfo("Waiting for move base server")
 client.wait_for_server()
+
+obra = ['monalisa.mp4', 'mulher_de_sombrinha.mp4',
+        'nascimentos_de_venus.mp4', 'noite_estrelada.mp4', 'traicao_das_imagens.mp4']
 
 
 def goto(px, py, oz, ow):
@@ -24,6 +31,28 @@ def goto(px, py, oz, ow):
     client.wait_for_result()
 
 
+def showvideo(name):
+    # capture = cv2.VideoCapture(
+    #     '/home/dayvson/catkin_ws/src/museum/museum/scripts/videos/'+name)
+    capture = cv2.VideoCapture(os.path.dirname(__file__)+'/videos/' + name)
+
+    while (capture.isOpened()):
+
+        ret, frame = capture.read()
+        cv2.namedWindow("Art", cv2.WINDOW_NORMAL)
+        cv2.resizeWindow("Art", 426, 240)
+        # frame = imutils.resize(frame, width=320)
+        if (ret == True):
+            cv2.imshow("Art", frame)
+            if (cv2.waitKey(30) == ord('s')):
+                break
+        else:
+            break
+
+    capture.release()
+    cv2.destroyAllWindows()
+
+
 rospy.loginfo('Start')
 goto(0, 0, 0.5, 0.5)
 
@@ -32,18 +61,23 @@ rospy.loginfo('Welcome')
 
 goto(-5, 0, 0.5, 0.5)
 rospy.loginfo('First art')
+showvideo(obra[0])
 
 goto(-5, -5, 0.5, 0.5)
 rospy.loginfo('Second art')
+showvideo(obra[1])
 
 goto(0, -5, 0.5, 0.5)
 rospy.loginfo('Third art')
+showvideo(obra[2])
 
 goto(5, -5, 0.5, 0.5)
 rospy.loginfo('Fourth art')
+showvideo(obra[3])
 
 goto(5, 0, 0.5, 0.5)
 rospy.loginfo('Fifth art')
+showvideo(obra[4])
 
 goto(0, 0, 0.5, 0.5)
 rospy.loginfo('Sixth art')

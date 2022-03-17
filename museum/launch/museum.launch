@@ -1,4 +1,5 @@
 <launch>
+    <remap from="scan" to="/front/scan" />
     <!-- gazebo with world -->
     <arg name="use_sim_time" default="true" />
     <arg name="gui" default="true" />
