@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-
-<launch>
-
-
-    <node name="rviz" pkg="rviz" type="rviz" respawn="false"    args="-d $(find robot_description)/rviz/config.rviz" />
-  </launch>
