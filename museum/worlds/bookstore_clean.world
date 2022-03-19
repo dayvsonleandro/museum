@@ -1548,7 +1548,7 @@
     </actor> -->
 
     <actor name="actor2">
-      <pose> -5 -4 -0.2 0 0 0</pose>
+      <pose> -4 -6 0 0 0 0</pose>
       <skin>
         <filename>walk.dae</filename>
         <scale>1.0</scale>
@@ -1556,6 +1556,7 @@
 
       <animation name="walking">
         <filename>walk.dae</filename>
+        <animation_factor>5.1</animation_factor>
         <scale>1.000000</scale>
         <interpolate_x>true</interpolate_x>
       </animation>
@@ -1566,39 +1567,52 @@
         <trajectory id="0" type="walking">
           <waypoint>
             <time>1.000000</time>
-            <pose>0 0 0 0.000000 0.000000 -1.47</pose>
-          </waypoint>
-          <waypoint>
-            <time>1.000000</time>
-            <pose>-1 0 0 0.000000 0.000000 -1.47</pose>
-          </waypoint>
-          <waypoint>
-            <time>1.500000</time>
-            <pose>-2 0 0 0.000000 0.000000 -1.47</pose>
+            <pose>-4 6 0 0 0 -1.57 </pose>
           </waypoint>
           <waypoint>
             <time>2.000000</time>
-            <pose>-3 0 0 0.000000 0.000000 -1.47</pose>
+            <pose>-5 4 0 0 0 0.78</pose>
           </waypoint>
           <waypoint>
-            <time>2.500000</time>
-            <pose>-4 0 0 0.000000 0.000000 -1.47</pose>
+            <time>4.000000</time>
+            <pose>-1.5 0.5 0 0 -2.61 </pose>
           </waypoint>
           <waypoint>
-            <time>3.000000</time>
-            <pose>-5 0 0 0.000000 0.000000 -1.47</pose>
+            <time>7.000000</time>
+            <pose>-4 -1 0 0 0 0.78 </pose>
+          </waypoint>
+          <waypoint>
+            <time>10.000000</time>
+            <pose>5 -5 0 </pose>
+          </waypoint>
+          <waypoint>
+            <time>13.000000</time>
+            <pose>0 -4 0 </pose>
+          </waypoint>
+          <waypoint>
+            <time>17.000000</time>
+            <pose>-4 -3 0 </pose>
+          </waypoint>
+          <waypoint>
+            <time>20.000000</time>
+            <pose>0 6 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>25.000000</time>
+            <pose>-4 6 0</pose>
           </waypoint>
         </trajectory>
       </script>
 
-      <collision name="bottom">
+      <!-- <collision name="bottom">
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <box>
             <size>0.35 0.75 0.02</size>
           </box>
         </geometry>
-      </collision>
+      </collision> -->
+
       <!-- <plugin name="actor2_plugin" filename="libActorPlugin.so">
         <target>4 -3 -0.2</target>
         <target_weight>1.15</target_weight>
@@ -1612,5 +1626,55 @@
       </plugin> -->
 
     </actor>
+    <!-- <actor name="animated_box">
+      <link name="box_link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>.3 .3 .5</size>
+            </box>
+          </geometry>
+        </visual>
+
+
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>.3 .3 .5</size>
+            </box>
+          </geometry>
+        </collision>
+
+      </link>
+
+
+      <script>
+        <loop>true</loop>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="square">
+          <waypoint>
+            <time>0.0</time>
+            <pose>-1 -1 0.3 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>1.0</time>
+            <pose>-1 1 0.3 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>2.0</time>
+            <pose>1 1 0.3 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>3.0</time>
+            <pose>1 -1 0.3 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>4.0</time>
+            <pose>-1 -1 0.3 0 0 0</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor> -->
   </world>
 </sdf>
