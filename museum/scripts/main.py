@@ -6,7 +6,8 @@ from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal, MoveBaseFeedback, M
 import cv2
 import imutils
 import os
-
+import vlc
+import time
 
 rospy.init_node('send_client_goal')
 
@@ -31,7 +32,7 @@ def goto(px, py, oz, ow):
     client.wait_for_result()
 
 
-def showvideo(name):
+def showvideo_1(name):
     # capture = cv2.VideoCapture(
     #     '/home/dayvson/catkin_ws/src/museum/museum/scripts/videos/'+name)
     capture = cv2.VideoCapture(os.path.dirname(__file__)+'/videos/' + name)
@@ -51,6 +52,17 @@ def showvideo(name):
 
     capture.release()
     cv2.destroyAllWindows()
+
+
+def showvideo(name):
+    player = vlc.MediaPlayer(os.path.dirname(__file__)+'/videos/' + name)
+
+    player.play()
+    time.sleep(3)
+    while player.is_playing():
+        a = 0
+
+    player.stop()
 
 
 rospy.loginfo('Start')
