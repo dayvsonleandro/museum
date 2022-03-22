@@ -54,36 +54,36 @@ def showvideo(name):
 
 
 rospy.loginfo('Start')
-goto(0, 0, 0.5, 0.5)
+# goto(0, 0, 0.7, 0.7)  # 1
 
-goto(-5, 5, 0.5, 0.5)
+goto(-5, 5, 0, 1)  # 2
 rospy.loginfo('Welcome')
 
-goto(-5, 0, 0.5, 0.5)
+goto(-5, 0, 0, 1)  # 3
 rospy.loginfo('First art')
 showvideo(obra[0])
 
-goto(-5, -5, 0.5, 0.5)
+goto(-5, -5, 0.7, 0.7)  # 4
 rospy.loginfo('Second art')
 showvideo(obra[1])
 
-goto(0, -5, 0.5, 0.5)
+goto(0, -5, 0.7, 0.7)  # 5
 rospy.loginfo('Third art')
 showvideo(obra[2])
 
-goto(5, -5, 0.5, 0.5)
+goto(5, -5, 0.7, 0.7)  # 6
 rospy.loginfo('Fourth art')
 showvideo(obra[3])
 
-goto(5, 0, 0.5, 0.5)
+goto(5, 0, 1, 0)  # 7
 rospy.loginfo('Fifth art')
 showvideo(obra[4])
 
-goto(0, 0, 0.5, 0.5)
-rospy.loginfo('Sixth art')
+# goto(0, 0, 0.7, 0.7)  # 8
+# rospy.loginfo('Sixth art')
 
-goto(0, 5, 0.5, 0.5)
-rospy.loginfo('Seventh art')
+goto(0, 5, 0.7, 0.7)  # 9
+# rospy.loginfo('Seventh art')
 
 
 rospy.loginfo('End')
