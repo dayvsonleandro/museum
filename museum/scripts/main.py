@@ -33,8 +33,6 @@ def goto(px, py, oz, ow):
 
 
 def showvideo_1(name):
-    # capture = cv2.VideoCapture(
-    #     '/home/dayvson/catkin_ws/src/museum/museum/scripts/videos/'+name)
     capture = cv2.VideoCapture(os.path.dirname(__file__)+'/videos/' + name)
 
     while (capture.isOpened()):
@@ -42,7 +40,6 @@ def showvideo_1(name):
         ret, frame = capture.read()
         cv2.namedWindow("Art", cv2.WINDOW_NORMAL)
         cv2.resizeWindow("Art", 426, 240)
-        # frame = imutils.resize(frame, width=320)
         if (ret == True):
             cv2.imshow("Art", frame)
             if (cv2.waitKey(30) == ord('s')):
